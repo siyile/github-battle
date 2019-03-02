@@ -1,6 +1,6 @@
-var axios = require("axios")
+var axios = require("axios"),
+access_token = require("./config").ACCESS_TOKEN;
 
-var access_token = 'd3ac3ebe4b13d9c066afaf7e63097f134b54f874';
 var params = '?access_token=' + access_token;
 
 

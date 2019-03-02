@@ -1,5 +1,6 @@
-dist
+
 out
+config.js
 
 # Logs
 logs
