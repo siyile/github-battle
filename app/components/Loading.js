@@ -1,21 +1,17 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-var styles = {
+const styles = {
   content: {
     textAlign: 'center',
     fontSize: '35px'
   }
 }
 
-export class Loading extends Component {
-  constructor(props){
-      super(props)
-
-      this.state = {
-          text: props.text,
-          speed: props.speed,
-      }
+export default class Loading extends Component {
+  state = {
+    text: this.props.text,
+    speed: this.props.speed,
   }
 
   static propTypes = {
@@ -29,14 +25,13 @@ export class Loading extends Component {
   }
 
   componentDidMount(){
-    var stopper = this.props.text + '...';
+    const { text, speed } = this.props;
+    var stopper = text + '...';
     this.interval = window.setInterval(() => {
-      if (this.state.text === stopper){
-        this.setState({text: this.props.text})
-      } else {
-        this.setState((prevState) => ({text: prevState.text + '.'}))
-      }
-    }, this.props.speed);
+      this.state.text === stopper
+        ? this.setState(() => ({text: text}))
+        : this.setState((prevState) => ({text: prevState.text + '.'}))
+    }, speed);
   }
 
   componentWillUnmount(){
@@ -53,5 +48,3 @@ export class Loading extends Component {
     )
   }
 }
-
-export default Loading

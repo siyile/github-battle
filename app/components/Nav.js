@@ -1,7 +1,7 @@
-var React = require("react"),
-NavLink = require("react-router-dom").NavLink;
+import React from "react"
+import { NavLink } from "react-router-dom"
 
-function Nav(){
+export default function Nav(){
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light mb-4">
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
@@ -24,5 +24,3 @@ function Nav(){
         </nav>
     )
 }
-
-module.exports = Nav

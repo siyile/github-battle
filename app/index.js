@@ -1,7 +1,6 @@
-var React = require("react"),
-ReactDOM = require("react-dom"),
-
-App = require("./components/app");
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./components/app";
 
 require("./index.css");
 
