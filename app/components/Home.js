@@ -11,7 +11,7 @@ class Home extends React.Component{
                     </h1>
                     <p className="lead">Battle your friends...and stuff.</p>
                     <hr className="my-4" />
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                    <p>Completing with your friend or anyone in the github by repo star and following.</p>
                     <Link className="btn mt-3 btn-dark btn-lg" to="/battle">
                     Battle
                     </Link>
